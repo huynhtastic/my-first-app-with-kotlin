@@ -1,5 +1,6 @@
 package com.example.huynhtastic.myfirstappwithkotlin
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -24,5 +25,12 @@ class MainActivity : AppCompatActivity() {
         var count: Int = Integer.parseInt(countString)
         count++
         textView.text = count.toString()
+    }
+
+    fun randomMe(view: View) {
+        val randomIntent = Intent(this, SecondActivity::class.java)
+        val count: Int = Integer.parseInt(textView.text.toString())
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+        startActivity(randomIntent)
     }
 }

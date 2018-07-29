@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/random_button_text"
+        android:onClick="randomMe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/countButton"
         app:layout_constraintRight_toRightOf="parent"
